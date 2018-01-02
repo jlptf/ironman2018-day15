@@ -1,0 +1,21 @@
+#####################################
+# 2018 ithome ironman
+# Author: James Lu
+# Topic: k8s 不自賞 - Day 15 Volume (2) 
+# Url: https://ithelp.ithome.com.tw/articles/10193550
+# Licence: MIT
+#####################################
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv001
+  labels: 
+    release: pv
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+  - ReadWriteOnce
+  hostPath:
+    path: /tmp
